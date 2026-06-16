@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.local
+.next/
+out/
+dist/
+*.log
+.DS_Store
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+.cache/
+scripts/.transcript-cache/
+scripts/candidates.json
+scripts/golden-set.skeleton.json
+*.tsbuildinfo

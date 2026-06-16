@@ -1,0 +1,38 @@
+[
+  {
+    "videoId": "fixture-01-aewol-house",
+    "meta": { "channelName": "제주부동산TV", "videoTitle": "애월 신축 단독주택", "regionHint": "제주시 애월읍" },
+    "mockTranscript": "안녕하세요 제주 부동산입니다. 오늘 소개할 매물은 제주시 애월읍에 위치한 신축 단독주택입니다. 매매가는 6억 8천만원이고요, 대지면적은 99제곱미터, 건물은 복층 구조입니다. 용도지역은 자연녹지지역이에요. 바다가 보이는 오션뷰 매물이고 주차는 2대 가능합니다.",
+    "truth": { "priceManwon": 68000, "areaPyeong": 30, "region": "제주시 애월읍", "zoning": "자연녹지지역", "propertyType": "단독주택", "dealType": "매매" }
+  },
+  {
+    "videoId": "fixture-02-jocheon-land",
+    "meta": { "channelName": "제주땅이야기", "videoTitle": "조천 계획관리 토지 급매", "regionHint": "제주시 조천읍" },
+    "mockTranscript": "이번 매물은 제주시 조천읍 토지입니다. 면적은 200평이고 매매가 3억 2천만원입니다. 용도지역은 계획관리지역입니다. 도로 접합 좋고 급매로 나왔어요.",
+    "truth": { "priceManwon": 32000, "areaPyeong": 200, "region": "제주시 조천읍", "zoning": "계획관리지역", "propertyType": "토지", "dealType": "매매" }
+  },
+  {
+    "videoId": "fixture-03-nohyung-apt",
+    "meta": { "channelName": "제주아파트", "videoTitle": "노형동 아파트 전세", "regionHint": "제주시 노형동" },
+    "mockTranscript": "제주시 노형동 아파트 전세 매물입니다. 전세보증금 4억원이고 전용면적 84제곱미터입니다. 25평형이에요.",
+    "truth": { "priceManwon": 40000, "areaPyeong": 25, "region": "제주시 노형동", "zoning": null, "propertyType": "아파트", "dealType": "전세" }
+  },
+  {
+    "videoId": "fixture-04-daejeong-villa",
+    "meta": { "channelName": "제주전원생활", "videoTitle": "대정 전원주택 세컨하우스", "regionHint": "서귀포시 대정읍" },
+    "mockTranscript": "서귀포시 대정읍에 위치한 전원주택입니다. 매매가는 2억 5천만원, 건물면적 132제곱미터입니다. 한적한 시골 단독으로 세컨하우스로 좋습니다.",
+    "truth": { "priceManwon": 25000, "areaPyeong": 40, "region": "서귀포시 대정읍", "zoning": null, "propertyType": "전원주택", "dealType": "매매" }
+  },
+  {
+    "videoId": "fixture-05-seongsan-shop",
+    "meta": { "channelName": "제주상가", "videoTitle": "성산 1층 상가 월세", "regionHint": "서귀포시 성산읍" },
+    "mockTranscript": "서귀포시 성산읍 상가 월세 매물입니다. 보증금 2천만원에 월세 130만원이에요. 1층 상가 66제곱미터입니다.",
+    "truth": { "priceManwon": 2000, "areaPyeong": 20, "region": "서귀포시 성산읍", "zoning": null, "propertyType": "상가", "dealType": "월세" }
+  },
+  {
+    "videoId": "fixture-06-pyoseon-auction",
+    "meta": { "channelName": "제주경매", "videoTitle": "표선 단독 경매 구옥", "regionHint": "서귀포시 표선면" },
+    "mockTranscript": "오늘은 서귀포시 표선면 단독주택 경매 물건입니다. 감정가 대비 최저가 1억 6천만원입니다. 대지 110제곱미터, 구옥이지만 리모델링하면 좋아요.",
+    "truth": { "priceManwon": 16000, "areaPyeong": 33, "region": "서귀포시 표선면", "zoning": null, "propertyType": "단독주택", "dealType": "경매" }
+  }
+]

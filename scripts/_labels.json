@@ -1,0 +1,23 @@
+[
+  { "videoId": "sUn3RCRxCh0", "truth": { "priceManwon": 46000, "areaPyeong": 142, "region": "서귀포시 표선면", "zoning": null, "propertyType": "전원주택", "dealType": "매매" } },
+  { "videoId": "0_Krot_A8Io", "truth": { "priceManwon": 35000, "areaPyeong": null, "region": "서귀포시 대정읍", "zoning": null, "propertyType": "빌라", "dealType": "매매" } },
+  { "videoId": "ahkqMKijMks", "truth": { "priceManwon": 85000, "areaPyeong": null, "region": "서귀포시 회수동", "zoning": null, "propertyType": "전원주택", "dealType": "매매" } },
+  { "videoId": "qwE7VES0gtQ", "truth": { "priceManwon": 25000, "areaPyeong": 100, "region": "제주시 한경면", "zoning": null, "propertyType": "전원주택", "dealType": "매매" } },
+  { "videoId": "i4WovCZcP8Q", "truth": { "priceManwon": 100000, "areaPyeong": null, "region": "제주시 조천읍", "zoning": null, "propertyType": "단독주택", "dealType": "매매" } },
+  { "videoId": "ifzePbpYkhQ", "truth": { "priceManwon": 120000, "areaPyeong": 107, "region": "제주시 애월읍", "zoning": "자연녹지지역", "propertyType": "상가주택", "dealType": "매매" } },
+  { "videoId": "1iBTGWYgKRc", "truth": { "priceManwon": 9000, "areaPyeong": 21, "region": "제주시 애월읍", "zoning": "1종일반주거지역", "propertyType": "빌라", "dealType": "매매" } },
+  { "videoId": "Yuj9vCB-7yw", "truth": { "priceManwon": 53000, "areaPyeong": null, "region": "제주시 애월읍", "zoning": "관리지역", "propertyType": "단독주택", "dealType": "매매" } },
+  { "videoId": "RXzQPTCmOxY", "truth": { "priceManwon": 29000, "areaPyeong": null, "region": "제주시 애월읍", "zoning": null, "propertyType": "단독주택", "dealType": "매매" } },
+  { "videoId": "SK-55ES3pb8", "truth": { "priceManwon": 29000, "areaPyeong": null, "region": "제주시 애월읍", "zoning": null, "propertyType": "단독주택", "dealType": "매매" } },
+  { "videoId": "DXO3HrXlHSc", "truth": { "priceManwon": 35000, "areaPyeong": 30, "region": "제주시 애월읍", "zoning": null, "propertyType": "단독주택", "dealType": "매매" } },
+  { "videoId": "mzzEy8jtxfA", "truth": { "priceManwon": 39500, "areaPyeong": null, "region": "제주시 애월읍", "zoning": null, "propertyType": "빌라", "dealType": "매매" } },
+  { "videoId": "F56HmS4yK0o", "truth": { "priceManwon": 30000, "areaPyeong": null, "region": "제주시 애월읍", "zoning": null, "propertyType": "전원주택", "dealType": "매매" } },
+  { "videoId": "LBZEagJrn2o", "truth": { "priceManwon": 75000, "areaPyeong": null, "region": "제주시 조천읍", "zoning": null, "propertyType": "단독주택", "dealType": "매매" } },
+  { "videoId": "SWfUWJ3hFEk", "truth": { "priceManwon": 50000, "areaPyeong": 89, "region": "제주시 조천읍", "zoning": "2종일반주거지역", "propertyType": "토지", "dealType": "매매" } },
+  { "videoId": "ERlz8qoMmB0", "truth": { "priceManwon": 150000, "areaPyeong": null, "region": "제주시 조천읍", "zoning": null, "propertyType": "단독주택", "dealType": "매매" } },
+  { "videoId": "BMES84ZWveY", "truth": { "priceManwon": 23000, "areaPyeong": 58, "region": "제주시 조천읍", "zoning": null, "propertyType": "빌라", "dealType": "매매" } },
+  { "videoId": "4jZvV-4v9hM", "truth": { "priceManwon": 22000, "areaPyeong": 78, "region": "제주시 조천읍", "zoning": null, "propertyType": "빌라", "dealType": "경매" } },
+  { "videoId": "Q2YlP2N8bZ0", "truth": { "priceManwon": 127000, "areaPyeong": 635, "region": "제주시 조천읍", "zoning": null, "propertyType": "토지", "dealType": "매매" } },
+  { "videoId": "KqOMxoz5HIc", "truth": { "priceManwon": 75000, "areaPyeong": 48, "region": "서귀포시 강정동", "zoning": null, "propertyType": "단독주택", "dealType": "매매" } },
+  { "videoId": "4H8DM6MbYhU", "truth": { "priceManwon": 25000, "areaPyeong": 96, "region": "서귀포시 법환동", "zoning": "1종일반주거지역", "propertyType": "토지", "dealType": "매매" } }
+]
