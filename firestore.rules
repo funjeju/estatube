@@ -1,0 +1,17 @@
+rules_version='2';
+service cloud.firestore { match /databases/{db}/documents {
+  function signed(){return request.auth!=null;}
+  function role(){return signed()?request.auth.token.role:'';}
+  function staff(){return role()=='editor'||role()=='superadmin';}
+  function owner(uid){return signed()&&request.auth.uid==uid;}
+  match /listings/{id}{ allow read: if resource.data.status=='published'||staff();
+                        allow create,update,delete: if staff(); }
+  match /agents/{id}{ allow read: if true; allow write: if staff(); }
+  match /savedSearches/{id}{ allow read,update,delete: if owner(resource.data.userId);
+                             allow create: if owner(request.resource.data.userId); }
+  match /favorites/{id}{ allow read,update,delete: if owner(resource.data.userId);
+                         allow create: if owner(request.resource.data.userId); }
+  match /alerts/{id}{ allow read,update: if owner(resource.data.userId); allow create,delete: if staff(); }
+  match /collectionJobs/{id}{ allow read,write: if staff(); }
+  match /optOutList/{id}{ allow read,write: if staff(); }
+}}

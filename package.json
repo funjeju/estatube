@@ -12,6 +12,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "fb:emulate": "firebase emulators:start --only firestore,auth",
+    "fb:deploy": "firebase deploy --only functions,firestore:rules,firestore:indexes",
     "poc": "tsx scripts/phase0-poc.ts",
     "collect:candidates": "tsx scripts/collect-candidates.ts",
     "fetch:transcripts": "tsx scripts/fetch-transcripts.ts"
@@ -19,6 +21,8 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
     "dotenv": "^16.4.5",
+    "firebase": "^11.1.0",
+    "firebase-admin": "^12.7.0",
     "next": "^14.2.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

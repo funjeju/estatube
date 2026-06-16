@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    { "collectionGroup": "listings", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "publishedAt", "order": "DESCENDING" }] },
+    { "collectionGroup": "listings", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "region", "order": "ASCENDING" }, { "fieldPath": "publishedAt", "order": "DESCENDING" }] },
+    { "collectionGroup": "listings", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "propertyType", "order": "ASCENDING" }, { "fieldPath": "priceManwon", "order": "ASCENDING" }] },
+    { "collectionGroup": "listings", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "priceManwon", "order": "DESCENDING" }] },
+    { "collectionGroup": "listings", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "priceDropAt", "order": "DESCENDING" }] },
+    { "collectionGroup": "listings", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "geohash", "order": "ASCENDING" }] },
+    { "collectionGroup": "listings", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "themes", "arrayConfig": "CONTAINS" }, { "fieldPath": "publishedAt", "order": "DESCENDING" }] },
+    { "collectionGroup": "listings", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "keywords", "arrayConfig": "CONTAINS" }, { "fieldPath": "publishedAt", "order": "DESCENDING" }] }
+  ],
+  "fieldOverrides": []
+}
