@@ -18,10 +18,13 @@ export default function AdminHome() {
           <span className="font-medium">수집 콘솔</span>
           <span className="block text-sm text-muted">기간·지역 수집 → draft</span>
         </Link>
-        <span className="rounded-card border border-dashed border-stone px-4 py-3 text-stone">
+        <Link
+          href="/admin/review"
+          className="rounded-card border border-stone px-4 py-3 transition hover:bg-sea-soft"
+        >
           <span className="font-medium">검수 큐</span>
-          <span className="block text-sm">T8 예정</span>
-        </span>
+          <span className="block text-sm text-muted">인라인 수정 → 승인·게시</span>
+        </Link>
         <span className="rounded-card border border-dashed border-stone px-4 py-3 text-stone">
           <span className="font-medium">게시·중개사</span>
           <span className="block text-sm">T9 예정</span>
