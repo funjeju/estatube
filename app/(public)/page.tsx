@@ -93,6 +93,7 @@ export default function MapHome() {
         <span className="font-bold">탐라인덱스</span>
         <span className="num text-sm text-muted">{listings.length} 매물</span>
         <Link href="/search" className="rounded-pill bg-sea px-3 py-1 text-sm text-paper">검색</Link>
+        <Link href="/themes" className="text-sm text-muted">테마</Link>
         <Link href="/my" className="text-sm text-muted">마이</Link>
       </div>
 

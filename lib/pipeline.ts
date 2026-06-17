@@ -9,6 +9,7 @@ import { extractWithGemini } from "./gemini";
 import { extractFallback } from "./extractFallback";
 import { geocode } from "./kakao";
 import { adminDb } from "./firebase/admin";
+import { underCap, incrUsage } from "./cost-guard";
 import type { Listing, Structured } from "./types";
 
 // ── LLM 백엔드 선택 (poc와 동일 규칙) ──────────────────────────────
@@ -187,9 +188,17 @@ export async function runCollect(input: CollectInput): Promise<CollectResult> {
       continue;
     }
 
+    // 비용 가드: 일일 LLM 상한 초과 시 중단(남은 항목은 다음 실행)
+    if (!(await underCap("llm"))) {
+      jobItems.push({ videoId: item.videoId, step: "guard", source: "-", status: "cost_capped" });
+      skipped++;
+      continue;
+    }
+
     // worker (건별 격리 — 한 건 실패가 루프를 끊지 않음)
     try {
       const listing = await processItemToDraft(item);
+      await incrUsage("llm");
       processed++;
       jobItems.push({ videoId: item.videoId, step: "draft", source: listing.extractionSource, status: "draft" });
     } catch (e) {
