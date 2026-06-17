@@ -3,13 +3,13 @@
 // DATA-AND-API §1: collect(가벼움) → worker(자막→구조화→지오코딩→썸네일→draft).
 // 멱등: docId=videoId. 건별 try/catch로 한 건 실패가 전체를 중단하지 않음.
 
-import { fetchTranscript, type VideoCandidate } from "./socialkit.js";
-import { extractWithClaude, type ExtractMeta } from "./claude.js";
-import { extractWithGemini } from "./gemini.js";
-import { extractFallback } from "./extractFallback.js";
-import { geocode } from "./kakao.js";
-import { adminDb } from "./firebase/admin.js";
-import type { Listing, Structured } from "./types.js";
+import { fetchTranscript, type VideoCandidate } from "./socialkit";
+import { extractWithClaude, type ExtractMeta } from "./claude";
+import { extractWithGemini } from "./gemini";
+import { extractFallback } from "./extractFallback";
+import { geocode } from "./kakao";
+import { adminDb } from "./firebase/admin";
+import type { Listing, Structured } from "./types";
 
 // ── LLM 백엔드 선택 (poc와 동일 규칙) ──────────────────────────────
 async function extract(
@@ -129,7 +129,7 @@ async function alreadyHandled(videoId: string): Promise<boolean> {
   return status !== "error";
 }
 
-interface JobItem {
+export interface JobItem {
   videoId: string;
   step: string;
   source: string;
@@ -151,6 +151,7 @@ export interface CollectResult {
   processed: number;
   failed: number;
   skipped: number;
+  items: JobItem[];
 }
 
 /**
@@ -229,5 +230,5 @@ export async function runCollect(input: CollectInput): Promise<CollectResult> {
   };
   await adminDb.collection("collectionJobs").doc(jobId).set(job);
 
-  return { jobId, found: input.items.length, processed, failed, skipped };
+  return { jobId, found: input.items.length, processed, failed, skipped, items: jobItems };
 }

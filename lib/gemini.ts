@@ -10,13 +10,13 @@ import {
   normalizeStructured,
   structuredSchema,
   type ExtractMeta,
-} from "./claude.js";
+} from "./claude";
 import {
   DEAL_TYPES,
   PROPERTY_TYPES,
   THEMES,
   type Structured,
-} from "./types.js";
+} from "./types";
 
 export const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 const BASE = "https://generativelanguage.googleapis.com/v1beta";

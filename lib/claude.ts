@@ -9,7 +9,7 @@ import {
   DEAL_TYPES,
   THEMES,
   type Structured,
-} from "./types.js";
+} from "./types";
 
 export const EXTRACTION_MODEL = "claude-sonnet-4-6";
 

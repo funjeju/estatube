@@ -1,7 +1,7 @@
 // lib/extractFallback.ts — LLM 미가용 시 정규식 폴백 (EXTRACTION-PROMPT.md §4).
 // confidence ≤ 0.4, extractionSource="fallback". 절대 LLM 대체가 아닌 최후수단.
 
-import type { DealType, PropertyType, Structured, Theme } from "./types.js";
+import type { DealType, PropertyType, Structured, Theme } from "./types";
 
 const PYEONG_PER_M2 = 3.3058;
 
