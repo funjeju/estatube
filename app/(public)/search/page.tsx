@@ -2,8 +2,9 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { getDocs, type QueryDocumentSnapshot, type DocumentData } from "firebase/firestore";
+import { getDocs, doc, setDoc, type QueryDocumentSnapshot, type DocumentData } from "firebase/firestore";
 import { db } from "@/lib/firebase/client";
+import { useAuth } from "@/components/auth-provider";
 import { ListingCard } from "@/components/listing-card";
 import { buildListingQuery, applyClientFilters, sortListings, PAGE_SIZE } from "@/lib/search";
 import {
@@ -21,6 +22,7 @@ const SORTS: { v: SearchFilters["sort"]; label: string }[] = [
 ];
 
 export default function SearchPage() {
+  const { user, signInGoogle } = useAuth();
   const [filters, setFilters] = useState<SearchFilters>({ sort: "latest" });
   const [kwInput, setKwInput] = useState("");
   const [appliedKw, setAppliedKw] = useState<string | undefined>(undefined);
@@ -82,7 +84,24 @@ export default function SearchPage() {
     <main className="mx-auto max-w-6xl px-4 py-6">
       <div className="flex items-center justify-between">
         <Link href="/" className="font-bold">탐라인덱스</Link>
-        <Link href="/" className="rounded-pill border border-stone px-3 py-1 text-sm text-muted">지도</Link>
+        <div className="flex gap-2">
+          <button
+            onClick={async () => {
+              if (!user) return signInGoogle();
+              const id = `${user.uid}_${Date.now()}`;
+              await setDoc(doc(db, "savedSearches", id), {
+                id, userId: user.uid,
+                filters: { ...filters, keyword: appliedKw },
+                alertFreq: "daily", createdAt: Date.now(),
+              });
+              alert("검색을 저장했습니다. 마이에서 알림주기를 설정하세요.");
+            }}
+            className="rounded-pill border border-sea px-3 py-1 text-sm text-sea"
+          >
+            검색 저장
+          </button>
+          <Link href="/" className="rounded-pill border border-stone px-3 py-1 text-sm text-muted">지도</Link>
+        </div>
       </div>
 
       {/* 키워드 */}
