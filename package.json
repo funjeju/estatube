@@ -16,7 +16,8 @@
     "fb:deploy": "firebase deploy --only functions,firestore:rules,firestore:indexes",
     "poc": "tsx scripts/phase0-poc.ts",
     "collect:candidates": "tsx scripts/collect-candidates.ts",
-    "fetch:transcripts": "tsx scripts/fetch-transcripts.ts"
+    "fetch:transcripts": "tsx scripts/fetch-transcripts.ts",
+    "set-role": "tsx scripts/set-role.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
