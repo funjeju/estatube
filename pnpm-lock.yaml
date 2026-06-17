@@ -20,6 +20,9 @@ importers:
       firebase-admin:
         specifier: ^12.7.0
         version: 12.7.0
+      geofire-common:
+        specifier: ^6.0.0
+        version: 6.0.0
       next:
         specifier: ^14.2.15
         version: 14.2.35(@opentelemetry/api@1.9.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1567,6 +1570,9 @@ packages:
   generator-function@2.0.1:
     resolution: {integrity: sha512-SFdFmIJi+ybC0vjlHN0ZGVGHc3lgE0DxPAT0djjVg+kjOnSqclqmj0KQ7ykTOLP6YxoqOvuAODGdcHJn+43q3g==}
     engines: {node: '>= 0.4'}
+
+  geofire-common@6.0.0:
+    resolution: {integrity: sha512-dQ2qKWMtHUEKT41Kw4dmAtMjvEyhWv1XPnHHlK5p5l5+0CgwHYQjhonGE2QcPP60cBYijbJ/XloeKDMU4snUQg==}
 
   get-caller-file@2.0.5:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
@@ -4537,6 +4543,8 @@ snapshots:
     optional: true
 
   generator-function@2.0.1: {}
+
+  geofire-common@6.0.0: {}
 
   get-caller-file@2.0.5: {}
 
