@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
-  collection, query, where, orderBy, onSnapshot, doc, getDoc, updateDoc, deleteDoc,
+  collection, query, where, onSnapshot, doc, getDoc, updateDoc, deleteDoc,
 } from "firebase/firestore";
 import { db } from "@/lib/firebase/client";
 import { useAuth } from "@/components/auth-provider";
@@ -24,7 +24,9 @@ export default function MyPage() {
     const unsubs = [
       onSnapshot(query(collection(db, "savedSearches"), where("userId", "==", uid)), (s) => setSaved(s.docs.map((d) => d.data() as SavedSearch))),
       onSnapshot(query(collection(db, "favorites"), where("userId", "==", uid)), (s) => setFavs(s.docs.map((d) => d.data() as Favorite))),
-      onSnapshot(query(collection(db, "alerts"), where("userId", "==", uid), orderBy("sentAt", "desc")), (s) => setAlerts(s.docs.map((d) => d.data() as AlertItem))),
+      onSnapshot(query(collection(db, "alerts"), where("userId", "==", uid)), (s) =>
+        setAlerts(s.docs.map((d) => d.data() as AlertItem).sort((a, b) => b.sentAt - a.sentAt)),
+      ),
     ];
     return () => unsubs.forEach((u) => u());
   }, [user]);
