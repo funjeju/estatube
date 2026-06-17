@@ -25,10 +25,14 @@ export default function AdminHome() {
           <span className="font-medium">검수 큐</span>
           <span className="block text-sm text-muted">인라인 수정 → 승인·게시</span>
         </Link>
-        <span className="rounded-card border border-dashed border-stone px-4 py-3 text-stone">
-          <span className="font-medium">게시·중개사</span>
-          <span className="block text-sm">T9 예정</span>
-        </span>
+        <Link href="/admin/published" className="rounded-card border border-stone px-4 py-3 transition hover:bg-sea-soft">
+          <span className="font-medium">게시 관리</span>
+          <span className="block text-sm text-muted">옵트아웃 takedown</span>
+        </Link>
+        <Link href="/admin/agents" className="rounded-card border border-stone px-4 py-3 transition hover:bg-sea-soft">
+          <span className="font-medium">중개사 관리</span>
+          <span className="block text-sm text-muted">verified·등록번호</span>
+        </Link>
       </nav>
     </main>
   );
